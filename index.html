@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Kours - Gestion de la liste des courses</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="language" content="French" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="liste des courses, gestion de courses, courses, achats, alimentation, supermarché" />
+    <meta name="author" content="alexandre cipor" />
+    <meta name="description"
+        content="Kours est une application web simplifiant la gestion de votre liste de courses, vous aidant à suivre et gérer vos achats de manière pratique et efficace." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kours.alexandrecipor.com" />
+    <meta property="og:title" content="Kours - Gestion de la liste des courses" />
+    <meta property="og:description"
+        content="Kours est une application web simplifiant la gestion de votre liste de courses, vous aidant à suivre et gérer vos achats de manière pratique et efficace." />
+    <meta property="og:image" content="/app/meta/main.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kours.alexandrecipor.com" />
+    <meta property="twitter:title" content="Kours - Gestion de la liste des courses" />
+    <meta property="twitter:description"
+        content="Kours est une application web simplifiant la gestion de votre liste de courses, vous aidant à suivre et gérer vos achats de manière pratique et efficace." />
+    <meta property="twitter:image" content="/app/meta/main.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/app/css/app.css">
+    <script defer src="/app/js/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Kours</h1>
+    </header>
+    <section class="kours">
+        <div class="addItem">
+            <button class="addButton" id="addButton">Ajouter un nouvel article</button>
+            <div class="addFormWrapper" id="addFormWrapper">
+                <div class="addForm">
+                    <h2>Ajouter un nouvel article</h2>
+                    <form class="addItemForm" id="addItemForm">
+                        <input type="text" id="itemName" placeholder="Nom de l'article" required>
+                        <input type="number" id="itemQuantity" placeholder="Quantité" required>
+                        <input type="number" id="itemPrice" placeholder="Prix (facultatif)" step="0.01"
+                            pattern="\d+(\.\d{2})?" title="Veuillez saisir un nombre avec deux décimales (ex: 12.34)">
+                        <button type="submit">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="items" id="items">
+            <p>Commencer par ajouter un article...</p>
+        </div>
+        <div class="summary" id="summary">
+            <h2>Résumé</h2>
+            <p id="itemCount">Nombre d'articles : 0</p>
+            <p id="totalCost">Coût total ≈ 0.00€</p>
+            <button id="clearListButton">Vider la liste</button>
+        </div>
+    </section>
+    <footer>
+        <p>
+            Fait par <a href="https://alexandrecipor.com">Alexandre CIPOR</a> avec ❤️
+        </p>
+        <p>
+            Code source disponible <a href="https://github.com/alexcpr/kours">ici.</a>
+        </p>
+        <p>
+            © 2023 Alexandre CIPOR. Tous droits reservés.
+        </p>
+    </footer>
+</body>
+
+</html>
